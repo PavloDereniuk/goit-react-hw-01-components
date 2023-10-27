@@ -1,6 +1,8 @@
-export const TransactionHistory = ({ transactions }) => {
+import { Container } from './TransactionHistory.styled';
+
+export const TransactionHistory = ({ items }) => {
   return (
-    <table className="transaction-history">
+    <Container>
       <thead>
         <tr>
           <th>Type</th>
@@ -9,16 +11,16 @@ export const TransactionHistory = ({ transactions }) => {
         </tr>
       </thead>
       <tbody>
-        {transactions.map(({ id, type, amount, currency }) => {
+        {items.map(({ id, type, amount, currency }) => {
           return (
-            <tr key={id}>
-              <td>{type}</td>
+            <tr key={id} className="lines">
+              <td className="type">{type}</td>
               <td>{amount}</td>
               <td>{currency}</td>
             </tr>
           );
         })}
       </tbody>
-    </table>
+    </Container>
   );
 };
