@@ -5,15 +5,15 @@ export const Container = styled.section`
   flex-wrap: wrap;
   justify-content: center;
   background-color: #fff;
-  width: 1000px;
-  height: 400px;
+  width: 1020px;
+  height: ${({ title }) => (title ? '400px' : '200px')};
+`;
 
-  h2 {
-    padding-top: 40px;
-    color: #737a7f;
-    text-transform: uppercase;
-    font-weight: 500;
-  }
+export const Title = styled.h2`
+  padding-top: 40px;
+  color: #737a7f;
+  text-transform: uppercase;
+  font-weight: 500;
 `;
 
 export const List = styled.ul`

@@ -1,4 +1,4 @@
-import { Container, List } from './Statistics.styled';
+import { Container, List, Title } from './Statistics.styled';
 
 const getRandomHexColor = () => {
   return `#${Math.floor(Math.random() * 16777215)
@@ -8,9 +8,9 @@ const getRandomHexColor = () => {
 
 export const Statistics = ({ title, stats }) => {
   return (
-    <Container>
-      <h2 className="title">{title}</h2>
-      <List>
+    <Container title={title}>
+      {title ? <Title>{title}</Title> : false}
+      <List >
         {stats.map(data => {
           return (
             <li

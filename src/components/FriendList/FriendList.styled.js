@@ -9,19 +9,19 @@ export const Container = styled.ul`
   flex-wrap: wrap;
   flex-direction: column;
   gap: 20px;
+`;
 
-  li {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    min-width: 600px;
-    min-height: 200px;
-    border: 4px #fff solid;
-    box-shadow: 10px 5px 5px #b3b3b3;
-    background-color: #fff;
-  }
+export const FriendListItem = styled.li`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-width: 600px;
+  min-height: 200px;
+  border: 4px #fff solid;
+  box-shadow: 10px 5px 5px #b3b3b3;
+  background-color: #fff;
 
-  li .avatar {
+  .avatar {
     width: 150px;
     height: 150px;
     margin-left: 50px;
