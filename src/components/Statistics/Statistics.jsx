@@ -9,7 +9,7 @@ const getRandomHexColor = () => {
 export const Statistics = ({ title, stats }) => {
   return (
     <Container title={title}>
-      {title ? <Title>{title}</Title> : false}
+      {title && <Title>{title}</Title>}
       <List >
         {stats.map(data => {
           return (
